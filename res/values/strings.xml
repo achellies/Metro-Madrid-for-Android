@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+	<string name="app_name">Metro Madrid</string>
+	<string name="app_version">1.2</string>
+
+	<!-- Map activity -->
+	<string name="mapactivity_title">Map</string>
+
+	<!-- Near subway activity -->
+	<string name="nearsubwayactivity_title">Near subway</string>
+
+</resources>

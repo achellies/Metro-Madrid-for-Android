@@ -1,0 +1,7 @@
+README:
+Simple application to consult the underground map of Madrid.
+
+CHANGELOG:
+1.0 - Just show a simple photo of the underground map.
+1.1 - Let the user zoom in and out.
+1.2 - Better image resolution and near subways detection.
