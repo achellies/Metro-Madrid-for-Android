@@ -18,13 +18,12 @@
 <resources>
 
     <!-- General -->
-    <string name="app_name">Madrid subway</string>
-    <string name="app_version">1.2</string>
+    <string name="app_name">Metro Madrid</string>
 
     <!-- Map activity -->
-    <string name="mapactivity_title">Map</string>
+    <string name="mapactivity_title">Mapa</string>
 
     <!-- Near subway activity -->
-    <string name="nearsubwayactivity_title">Near subway</string>
+    <string name="nearsubwayactivity_title">Estaciones cercanas</string>
 
 </resources>
