@@ -20,6 +20,11 @@
     android:layout_height="fill_parent"
     android:orientation="vertical" >
 
+    <com.smaato.SOMA.SOMABanner
+        android:id="@+id/layout_nearsubway_ad"
+        android:layout_width="fill_parent"
+        android:layout_height="50dip" />
+
     <ListView
         android:id="@+id/layout_nearsubway_list"
         android:layout_width="fill_parent"

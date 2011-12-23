@@ -9,9 +9,8 @@ CHANGELOG:
 1.0 - Just show a simple photo of the underground map.
 1.1 - Let the user zoom in and out.
 1.2 - Better image resolution and near subways detection.
-1.3 - Registered under GPL v3, Spanish and Gallegan translations.
+1.3 - Registered under GPL v3, Spanish, French and Gallegan translations.
 
 TODO:
 - Change stations searching method and include all subway entrances.
 - Show near stations in a map.
-- Find a decent ads publisher.

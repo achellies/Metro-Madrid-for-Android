@@ -8,5 +8,6 @@
 	<classpathentry kind="lib" path="lib/google-http-client-1.6.0-beta.jar"/>
 	<classpathentry kind="lib" path="lib/guava-r09.jar"/>
 	<classpathentry kind="lib" path="lib/jackson-core-asl-1.9.1.jar"/>
+	<classpathentry kind="lib" path="lib/SOMAAndroidSDK2.5.4.jar"/>
 	<classpathentry kind="output" path="bin/classes"/>
 </classpath>

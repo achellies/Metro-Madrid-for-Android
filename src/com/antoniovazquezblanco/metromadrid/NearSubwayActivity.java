@@ -33,6 +33,7 @@ import android.widget.Toast;
 
 import com.antoniovazquezblanco.metromadrid.api.Place;
 import com.antoniovazquezblanco.metromadrid.api.SubwaySearcher;
+import com.smaato.SOMA.SOMABanner;
 
 public class NearSubwayActivity extends Activity implements LocationListener {
 
@@ -41,6 +42,7 @@ public class NearSubwayActivity extends Activity implements LocationListener {
 	private PlaceListAdapter mAdapter;
 	private SubwaySearcher mSubSearcher;
 	private LocationManager mLocationManager;
+	private SOMABanner mBanner;
 	
 	@Override
     public void onCreate(Bundle savedInstanceState) {
@@ -54,7 +56,11 @@ public class NearSubwayActivity extends Activity implements LocationListener {
 		((ListView) findViewById(R.id.layout_nearsubway_list)).setAdapter(mAdapter);
 		mLocationManager = (LocationManager) this.getSystemService(Context.LOCATION_SERVICE);
 		
-		// TODO: Mostrar logo!
+		// Set ad properties.
+        mBanner = (SOMABanner) findViewById(R.id.layout_map_ad);
+        mBanner.setPublisherId(KeyClass.SMAATO_PUBLISHER_ID);
+        mBanner.setAdSpaceId(KeyClass.SMAATO_APP_ID);
+        mBanner.setLocationUpdateEnabled(true);
 	}
 
 	@Override
@@ -67,6 +73,8 @@ public class NearSubwayActivity extends Activity implements LocationListener {
 			// TODO: Dialog...
 			Toast.makeText(mContext, "This app needs GPS or location providers.", Toast.LENGTH_LONG);
 		mLocationManager.requestLocationUpdates(provider, 500, 1, this);
+
+		mBanner.setAutoRefresh(true);
 	}
 
 	@Override
@@ -75,6 +83,7 @@ public class NearSubwayActivity extends Activity implements LocationListener {
 
 		//Delete listener...
 		mLocationManager.removeUpdates(this);
+		mBanner.setAutoRefresh(false);
 	}
 
 	@Override

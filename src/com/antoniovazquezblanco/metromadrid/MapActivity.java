@@ -18,21 +18,44 @@
 
 package com.antoniovazquezblanco.metromadrid;
 
+import com.smaato.SOMA.SOMABanner;
+
 import android.app.Activity;
 import android.os.Bundle;
 import android.webkit.WebView;
 
 public class MapActivity extends Activity {
 
+	private SOMABanner mBanner;
+
 	@Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.layout_map);
 
-        WebView mView = (WebView) findViewById(R.id.webview);
+        // Set WebView properties.
+        WebView mView = (WebView) findViewById(R.id.layout_map_webview);
         mView.getSettings().setBuiltInZoomControls(true);
         mView.getSettings().setUseWideViewPort(true);
         mView.getSettings().setJavaScriptEnabled(false);
         mView.loadUrl("file:///android_asset/map.html");
+
+        // Set ad properties.
+        mBanner = (SOMABanner) findViewById(R.id.layout_map_ad);
+        mBanner.setPublisherId(KeyClass.SMAATO_PUBLISHER_ID);
+        mBanner.setAdSpaceId(KeyClass.SMAATO_APP_ID);
+        mBanner.setLocationUpdateEnabled(true);
     }
+
+	@Override
+	protected void onResume() {
+		super.onResume();
+		mBanner.setAutoRefresh(true);
+	}
+
+	@Override
+	protected void onPause() {
+		super.onPause();
+		mBanner.setAutoRefresh(false);
+	}
 }
